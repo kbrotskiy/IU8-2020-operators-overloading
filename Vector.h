@@ -1,9 +1,9 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 
 using namespace std;
 
-class Vector // Класс- вектор
+class Vector // РљР»Р°СЃСЃ- РІРµРєС‚РѕСЂ
 {
 	int *p;
 	int n;

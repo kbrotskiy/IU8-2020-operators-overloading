@@ -1,4 +1,4 @@
-#include "Vector.h"
+п»ї#include "Vector.h"
 #include <string>
 #include <iostream>
 #include <vector>
@@ -33,9 +33,9 @@ Vector::Vector(Vector&& V)
 	V.n = 0;
 }
 
-Vector::~Vector() // Деструктор
+Vector::~Vector() // Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
 {
-	if (p != nullptr) delete[] p; // Освобождаем память
+	if (p != nullptr) delete[] p; // РћСЃРІРѕР±РѕР¶РґР°РµРј РїР°РјСЏС‚СЊ
 }
 
 Vector& Vector::operator^(const Vector & vector) {
@@ -49,26 +49,26 @@ Vector& Vector::operator^(const Vector & vector) {
 }
 
 
-Vector& Vector::operator=(const Vector& v2) // Оператор- функция копирования объекта 
+Vector& Vector::operator=(const Vector& v2) // РћРїРµСЂР°С‚РѕСЂ- С„СѓРЅРєС†РёСЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РѕР±СЉРµРєС‚Р° 
 {
 	cout << "Assignment copy operator" << endl;
 	n = v2.n;
-	if (p != nullptr) delete[] p; // Освобождаем память старого вектора
-	p = new int[n]; // Выделяем память для нового вектора
+	if (p != nullptr) delete[] p; // РћСЃРІРѕР±РѕР¶РґР°РµРј РїР°РјСЏС‚СЊ СЃС‚Р°СЂРѕРіРѕ РІРµРєС‚РѕСЂР°
+	p = new int[n]; // Р’С‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РґР»СЏ РЅРѕРІРѕРіРѕ РІРµРєС‚РѕСЂР°
 	for (int i = 0; i < n; i++) p[i] = v2.p[i];
-	return *this; // Возвращаем ссылку на текущий объект
+	return *this; // Р’РѕР·РІСЂР°С‰Р°РµРј СЃСЃС‹Р»РєСѓ РЅР° С‚РµРєСѓС‰РёР№ РѕР±СЉРµРєС‚
 }
 
-Vector& Vector::operator=(Vector&& v2) // Оператор- функция копирования объекта 
+Vector& Vector::operator=(Vector&& v2) // РћРїРµСЂР°С‚РѕСЂ- С„СѓРЅРєС†РёСЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РѕР±СЉРµРєС‚Р° 
 {
 	cout << "Assignment move operator" << endl;
 	n = v2.n;
-	if (p != nullptr) delete[] p; // Освобождаем память старого вектора
-	p = new int[n]; // Выделяем память для нового вектора
+	if (p != nullptr) delete[] p; // РћСЃРІРѕР±РѕР¶РґР°РµРј РїР°РјСЏС‚СЊ СЃС‚Р°СЂРѕРіРѕ РІРµРєС‚РѕСЂР°
+	p = new int[n]; // Р’С‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РґР»СЏ РЅРѕРІРѕРіРѕ РІРµРєС‚РѕСЂР°
 	for (int i = 0; i < n; i++) p[i] = v2.p[i];
 	v2.p = nullptr;
 	v2.n = 0;
-	return *this; // Возвращаем ссылку на текущий объект
+	return *this; // Р’РѕР·РІСЂР°С‰Р°РµРј СЃСЃС‹Р»РєСѓ РЅР° С‚РµРєСѓС‰РёР№ РѕР±СЉРµРєС‚
 }
 
 
